@@ -1,0 +1,172 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body onload="setShipsToLayout('S1')">
+	<h1>Schiffe versenken</h1>
+
+	<h2>Spieler 1 ist dran</h2>
+	<span>
+    <div>
+			<table>
+			<tr>
+				<td class="zelle"></td>
+				<td class="zelle">1</td>
+				<td class="zelle">2</td>
+				<td class="zelle">3</td>
+				<td class="zelle">4</td>
+				<td class="zelle">5</td>
+				<td class="zelle">6</td>
+				<td class="zelle">7</td>
+				<td class="zelle">8</td>
+				<td class="zelle">9</td>
+				<td class="zelle">10</td>
+			</tr>
+			<tr>
+				<td class="zelle">A</td>
+				<td class="zelle" id="A1"></td>
+				<td class="zelle" id="A2"></td>
+				<td class="zelle" id="A3"></td>
+				<td class="zelle" id="A4"></td>
+				<td class="zelle" id="A5"></td>
+				<td class="zelle" id="A6"></td>
+				<td class="zelle" id="A7"></td>
+				<td class="zelle" id="A8"></td>
+				<td class="zelle" id="A9"></td>
+				<td class="zelle" id="A10"></td>
+			</tr>
+			<tr>
+				<td class="zelle">B</td>
+				<td class="zelle" id="B1"></td>
+				<td class="zelle" id="B2"></td>
+				<td class="zelle" id="B3"></td>
+				<td class="zelle" id="B4"></td>
+				<td class="zelle" id="B5"></td>
+				<td class="zelle" id="B6"></td>
+				<td class="zelle" id="B7"></td>
+				<td class="zelle" id="B8"></td>
+				<td class="zelle" id="B9"></td>
+				<td class="zelle" id="B10"></td>
+			</tr>
+			<tr>
+				<td class="zelle" >C</td>
+				<td class="zelle" id="C1"></td>
+				<td class="zelle" id="C2"></td>
+				<td class="zelle" id="C3"></td>
+				<td class="zelle" id="C4"></td>
+				<td class="zelle" id="C5"></td>
+				<td class="zelle" id="C6"></td>
+				<td class="zelle" id="C7"></td>
+				<td class="zelle" id="C8"></td>
+				<td class="zelle" id="C9"></td>
+				<td class="zelle" id="C10"></td>
+			</tr>
+			<tr>
+				<td class="zelle">D</td>
+				<td class="zelle" id="D1"></td>
+				<td class="zelle" id="D2"></td>
+				<td class="zelle" id="D3"></td>
+				<td class="zelle" id="D4"></td>
+				<td class="zelle" id="D5"></td>
+				<td class="zelle" id="D6"></td>
+				<td class="zelle" id="D7"></td>
+				<td class="zelle" id="D8"></td>
+				<td class="zelle" id="D9"></td>
+				<td class="zelle" id="D10"></td>
+			</tr>
+			<tr>
+				<td class="zelle">E</td>
+				<td class="zelle" id="E1"></td>
+				<td class="zelle" id="E2"></td>
+				<td class="zelle" id="E3"></td>
+				<td class="zelle" id="E4"></td>
+				<td class="zelle" id="E5"></td>
+				<td class="zelle" id="E6"></td>
+				<td class="zelle" id="E7"></td>
+				<td class="zelle" id="E8"></td>
+				<td class="zelle" id="E9"></td>
+				<td class="zelle" id="E10"></td>
+			</tr>
+			<tr>
+				<td class="zelle">F</td>
+				<td class="zelle" id="F1"></td>
+				<td class="zelle" id="F2"></td>
+				<td class="zelle" id="F3"></td>
+				<td class="zelle" id="F4"></td>
+				<td class="zelle" id="F5"></td>
+				<td class="zelle" id="F6"></td>
+				<td class="zelle" id="F7"></td>
+				<td class="zelle" id="F8"></td>
+				<td class="zelle" id="F9"></td>
+				<td class="zelle" id="F10"></td>
+			</tr>
+			<tr>
+				<td class="zelle">G</td>
+				<td class="zelle" id="G1"></td>
+				<td class="zelle" id="G2"></td>
+				<td class="zelle" id="G3"></td>
+				<td class="zelle" id="G4"></td>
+				<td class="zelle" id="G5"></td>
+				<td class="zelle" id="G6"></td>
+				<td class="zelle" id="G7"></td>
+				<td class="zelle" id="G8"></td>
+				<td class="zelle" id="G9"></td>
+				<td class="zelle" id="G10"></td>
+			</tr>
+			<tr>
+				<td class="zelle">H</td>
+				<td class="zelle" id="H1"></td>
+				<td class="zelle" id="H2"></td>
+				<td class="zelle" id="H3"></td>
+				<td class="zelle" id="H4"></td>
+				<td class="zelle" id="H5"></td>
+				<td class="zelle" id="H6"></td>
+				<td class="zelle" id="H7"></td>
+				<td class="zelle" id="H8"></td>
+				<td class="zelle" id="H9"></td>
+				<td class="zelle" id="H10"></td>
+			</tr>
+			<tr>
+				<td class="zelle">I</td>
+				<td class="zelle" id="I1"></td>
+				<td class="zelle" id="I2"></td>
+				<td class="zelle" id="I3"></td>
+				<td class="zelle" id="I4"></td>
+				<td class="zelle" id="I5"></td>
+				<td class="zelle" id="I6"></td>
+				<td class="zelle" id="I7"></td>
+				<td class="zelle" id="I8"></td>
+				<td class="zelle" id="I9"></td>
+				<td class="zelle" id="I10"></td>
+			</tr>
+			<tr>
+				<td class="zelle">J</td>
+				<td class="zelle" id="J1"></td>
+				<td class="zelle" id="J2"></td>
+				<td class="zelle" id="J3"></td>
+				<td class="zelle" id="J4"></td>
+				<td class="zelle" id="J5"></td>
+				<td class="zelle" id="J6"></td>
+				<td class="zelle" id="J7"></td>
+				<td class="zelle" id="J8"></td>
+				<td class="zelle" id="J9"></td>
+				<td class="zelle" id="J10"></td>
+			</tr>
+		</table>
+	</div>
+
+  <div>
+    <br>
+    <br>
+    <label>Koordinate eintragen:</label>
+    <input id="attackInputP1" maxlength="2" style="width: 30px; margin-right: 30px"></input>
+    <button onclick="attackPlayer('S1','attackInputP1')">Mach dein Zug!</button>
+  </div>
+  </span>
+</body>
+
+</html>

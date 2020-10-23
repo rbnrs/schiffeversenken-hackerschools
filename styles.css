@@ -1,0 +1,17 @@
+.zelle {
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+}
+
+.zelleinfo {
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}

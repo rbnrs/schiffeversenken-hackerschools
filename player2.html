@@ -1,0 +1,199 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body onload="getFromLocalStorage()">
+	<h1>Spieler 2</h1>
+	<p>Bitte hier die Koordinaten der Schiffe eintragen:</p>
+	<table>
+		<tr>
+			<td>
+				<label style="margin-right: 50px">Schiff 1 (3er):</label>
+			</td>
+			<td>
+				<input id="s1z1" style="width: 30px" maxlength="3"></input>
+				<input id="s1z2" style="width: 30px" maxlength="3"></input>
+				<input id="s1z3" style="width: 30px" maxlength="3"></input>
+			<td>
+		</tr>
+		<tr>
+			<td>
+				<label style="margin-right: 50px">Schiff 2 (3er):</label>
+			</td>
+			<td>
+				<input id="s2z1" style="width: 30px" maxlength="3"></input>
+				<input id="s2z2" style="width: 30px" maxlength="3"></input>
+				<input id="s2z3" style="width: 30px" maxlength="3"></input>
+			<td>
+		</tr>
+		<tr>
+			<td>
+				<label style="margin-right: 50px">Schiff 3 (4er):</label>
+			</td>
+			<td>
+				<input id="s3z1" style="width: 30px" maxlength="3"></input>
+				<input id="s3z2" style="width: 30px" maxlength="3"></input>
+				<input id="s3z3" style="width: 30px" maxlength="3"></input>
+				<input id="s3z4" style="width: 30px" maxlength="3"></input>
+			<td>
+		</tr>
+	</table>
+	<br>
+	<button onclick="setShips('S2')">Spiel starten!</button>
+	<br>
+	<br>
+	<p>Spielfeld:</p>
+	<div>
+		<table>
+			<tr>
+				<td class="zelleinfo"></td>
+				<td class="zelleinfo">1</td>
+				<td class="zelleinfo">2</td>
+				<td class="zelleinfo">3</td>
+				<td class="zelleinfo">4</td>
+				<td class="zelleinfo">5</td>
+				<td class="zelleinfo">6</td>
+				<td class="zelleinfo">7</td>
+				<td class="zelleinfo">8</td>
+				<td class="zelleinfo">9</td>
+				<td class="zelleinfo">10</td>
+			</tr>
+			<tr>
+				<td class="zelleinfo">A</td>
+				<td class="zelleinfo" id="A1"></td>
+				<td class="zelleinfo" id="A2"></td>
+				<td class="zelleinfo" id="A3"></td>
+				<td class="zelleinfo" id="A4"></td>
+				<td class="zelleinfo" id="A5"></td>
+				<td class="zelleinfo" id="A6"></td>
+				<td class="zelleinfo" id="A7"></td>
+				<td class="zelleinfo" id="A8"></td>
+				<td class="zelleinfo" id="A9"></td>
+				<td class="zelleinfo" id="A10"></td>
+			</tr>
+			<tr>
+				<td class="zelleinfo">B</td>
+				<td class="zelleinfo" id="B1"></td>
+				<td class="zelleinfo" id="B2"></td>
+				<td class="zelleinfo" id="B3"></td>
+				<td class="zelleinfo" id="B4"></td>
+				<td class="zelleinfo" id="B5"></td>
+				<td class="zelleinfo" id="B6"></td>
+				<td class="zelleinfo" id="B7"></td>
+				<td class="zelleinfo" id="B8"></td>
+				<td class="zelleinfo" id="B9"></td>
+				<td class="zelleinfo" id="B10"></td>
+			</tr>
+			<tr>
+				<td class="zelleinfo">C</td>
+				<td class="zelleinfo" id="C1"></td>
+				<td class="zelleinfo" id="C2"></td>
+				<td class="zelleinfo" id="C3"></td>
+				<td class="zelleinfo" id="C4"></td>
+				<td class="zelleinfo" id="C5"></td>
+				<td class="zelleinfo" id="C6"></td>
+				<td class="zelleinfo" id="C7"></td>
+				<td class="zelleinfo" id="C8"></td>
+				<td class="zelleinfo" id="C9"></td>
+				<td class="zelleinfo" id="C10"></td>
+			</tr>
+			<tr>
+				<td class="zelleinfo">D</td>
+				<td class="zelleinfo" id="D1"></td>
+				<td class="zelleinfo" id="D2"></td>
+				<td class="zelleinfo" id="D3"></td>
+				<td class="zelleinfo" id="D4"></td>
+				<td class="zelleinfo" id="D5"></td>
+				<td class="zelleinfo" id="D6"></td>
+				<td class="zelleinfo" id="D7"></td>
+				<td class="zelleinfo" id="D8"></td>
+				<td class="zelleinfo" id="D9"></td>
+				<td class="zelleinfo" id="D10"></td>
+			</tr>
+			<tr>
+				<td class="zelleinfo">E</td>
+				<td class="zelleinfo" id="E1"></td>
+				<td class="zelleinfo" id="E2"></td>
+				<td class="zelleinfo" id="E3"></td>
+				<td class="zelleinfo" id="E4"></td>
+				<td class="zelleinfo" id="E5"></td>
+				<td class="zelleinfo" id="E6"></td>
+				<td class="zelleinfo" id="E7"></td>
+				<td class="zelleinfo" id="E8"></td>
+				<td class="zelleinfo" id="E9"></td>
+				<td class="zelleinfo" id="E10"></td>
+			</tr>
+			<tr>
+				<td class="zelleinfo">F</td>
+				<td class="zelleinfo" id="F1"></td>
+				<td class="zelleinfo" id="F2"></td>
+				<td class="zelleinfo" id="F3"></td>
+				<td class="zelleinfo" id="F4"></td>
+				<td class="zelleinfo" id="F5"></td>
+				<td class="zelleinfo" id="F6"></td>
+				<td class="zelleinfo" id="F7"></td>
+				<td class="zelleinfo" id="F8"></td>
+				<td class="zelleinfo" id="F9"></td>
+				<td class="zelleinfo" id="F10"></td>
+			</tr>
+			<tr>
+				<td class="zelleinfo">G</td>
+				<td class="zelleinfo" id="G1"></td>
+				<td class="zelleinfo" id="G2"></td>
+				<td class="zelleinfo" id="G3"></td>
+				<td class="zelleinfo" id="G4"></td>
+				<td class="zelleinfo" id="G5"></td>
+				<td class="zelleinfo" id="G6"></td>
+				<td class="zelleinfo" id="G7"></td>
+				<td class="zelleinfo" id="G8"></td>
+				<td class="zelleinfo" id="G9"></td>
+				<td class="zelleinfo" id="G10"></td>
+			</tr>
+			<tr>
+				<td class="zelleinfo">H</td>
+				<td class="zelleinfo" id="H1"></td>
+				<td class="zelleinfo" id="H2"></td>
+				<td class="zelleinfo" id="H3"></td>
+				<td class="zelleinfo" id="H4"></td>
+				<td class="zelleinfo" id="H5"></td>
+				<td class="zelleinfo" id="H6"></td>
+				<td class="zelleinfo" id="H7"></td>
+				<td class="zelleinfo" id="H8"></td>
+				<td class="zelleinfo" id="H9"></td>
+				<td class="zelleinfo" id="H10"></td>
+			</tr>
+			<tr>
+				<td class="zelleinfo">I</td>
+				<td class="zelleinfo" id="I1"></td>
+				<td class="zelleinfo" id="I2"></td>
+				<td class="zelleinfo" id="I3"></td>
+				<td class="zelleinfo" id="I4"></td>
+				<td class="zelleinfo" id="I5"></td>
+				<td class="zelleinfo" id="I6"></td>
+				<td class="zelleinfo" id="I7"></td>
+				<td class="zelleinfo" id="I8"></td>
+				<td class="zelleinfo" id="I9"></td>
+				<td class="zelleinfo" id="I10"></td>
+			</tr>
+			<tr>
+				<td class="zelleinfo">J</td>
+				<td class="zelleinfo" id="J1"></td>
+				<td class="zelleinfo" id="J2"></td>
+				<td class="zelleinfo" id="J3"></td>
+				<td class="zelleinfo" id="J4"></td>
+				<td class="zelleinfo" id="J5"></td>
+				<td class="zelleinfo" id="J6"></td>
+				<td class="zelleinfo" id="J7"></td>
+				<td class="zelleinfo" id="J8"></td>
+				<td class="zelleinfo" id="J9"></td>
+				<td class="zelleinfo" id="J10"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+
+</html>
